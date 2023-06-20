@@ -1,0 +1,36 @@
+{
+    "name": "shrestharikesh/media-manager",
+    "description": "Seamless Media manager",
+    "keywords": [
+        "shrestharikesh",
+        "laravel-media",
+        "media",
+        "media-manager"
+    ],
+    "authors": [
+        {
+            "name": "Rikesh Shrestha",
+            "email": "er.shrestharikesh@gmail.com",
+            "homepage": "https://shrestharikesh.com.np",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/shrestharikesh/media-manager",
+    "require": {
+        "php": "^8.0",
+        "illuminate/database": "^9.18|^10.0",
+        "illuminate/support": "^9.18|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shrestharikesh\\MediaManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shrestharikesh\\MediaManager\\MediaServiceProvider"
+            ]
+        }
+    }
+}
