@@ -1,6 +1,7 @@
 {
     "name": "shrestharikesh/media-manager",
     "description": "Seamless Media manager",
+    "license": "MIT",
     "keywords": [
         "shrestharikesh",
         "laravel-media",
