@@ -71,7 +71,7 @@ trait InteractsWithMedia
         return $media->first();
     }
 
-    public function deleteMedia($type)
+    public function deleteMedia($type = null)
     {
         foreach ($this->getMedia($type) as $media) {
             if (Storage::disk('public')->exists($media->path)) {
@@ -79,6 +79,14 @@ trait InteractsWithMedia
             }
             $media->delete();
         }
+    }
+    public function deleteSpecificMedia($id)
+    {
+        $media = Media::find($id);
+        if (Storage::disk('public')->exists($media->path)) {
+            Storage::disk('public')->delete($media->path);
+        }
+        $media->delete();
     }
 
     protected function getFilename($file): string

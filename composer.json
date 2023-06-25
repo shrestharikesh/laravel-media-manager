@@ -19,7 +19,7 @@
     ],
     "homepage": "https://github.com/shrestharikesh/laravel-media-manager",
     "require": {
-        "php": "^8.0",
+        "php": ">=7.3",
         "illuminate/database": "^9.18|^10.0",
         "illuminate/support": "^9.18|^10.0"
     },
