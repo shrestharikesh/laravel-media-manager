@@ -1,12 +1,13 @@
 {
-    "name": "shrestharikesh/media-manager",
-    "description": "Seamless Media manager",
+    "name": "shrestharikesh/laravel-media-manager",
+    "description": "Easily Upload Media in laravel",
     "license": "MIT",
     "keywords": [
         "shrestharikesh",
         "laravel-media",
+        "laravel-image-upload",
         "media",
-        "media-manager"
+        "laravel-media-manager"
     ],
     "authors": [
         {
@@ -16,7 +17,7 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/shrestharikesh/media-manager",
+    "homepage": "https://github.com/shrestharikesh/laravel-media-manager",
     "require": {
         "php": "^8.0",
         "illuminate/database": "^9.18|^10.0",
