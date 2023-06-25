@@ -73,7 +73,7 @@ $post->deleteMedia('featured');
 ```
 Maybe just the one you don't need anymore:
 ```php
-$post->deleteMedia(1); // Pass the media id
+$post->deleteSpecificMedia(1); // Pass the media id
 ```
 
 Oh no! you've found bugs? Feel free to [create an issue on GitHub](https://github.com/shrestharikesh/laravel-media-manager/issues), we'll fix it ASAP.
