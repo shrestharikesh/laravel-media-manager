@@ -1,0 +1,38 @@
+{
+    "name": "shrestharikesh/laravel-media-manager",
+    "description": "Easily Upload Media in laravel",
+    "license": "MIT",
+    "keywords": [
+        "shrestharikesh",
+        "laravel-media",
+        "laravel-image-upload",
+        "media",
+        "laravel-media-manager"
+    ],
+    "authors": [
+        {
+            "name": "Rikesh Shrestha",
+            "email": "er.shrestharikesh@gmail.com",
+            "homepage": "https://shrestharikesh.com.np",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/shrestharikesh/laravel-media-manager",
+    "require": {
+        "php": ">=7.3",
+        "illuminate/database": "^9.18|^10.0",
+        "illuminate/support": "^9.18|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shrestharikesh\\LaravelMediaManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shrestharikesh\\LaravelMediaManager\\MediaServiceProvider"
+            ]
+        }
+    }
+}
