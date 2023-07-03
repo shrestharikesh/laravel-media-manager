@@ -25,13 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Shrestharikesh\\MediaManager\\": "src/"
+            "Shrestharikesh\\LaravelMediaManager\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Shrestharikesh\\MediaManager\\MediaServiceProvider"
+                "Shrestharikesh\\LaravelMediaManager\\MediaServiceProvider"
             ]
         }
     }

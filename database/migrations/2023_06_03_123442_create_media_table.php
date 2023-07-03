@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->id();
             $table->morphs('media');
-            $table->string('filename');
+            $table->string('alt_text');
             $table->string('url');
             $table->string('path');
-            $table->string('type');
+            $table->string('tag');
             $table->timestamps();
         });
     }

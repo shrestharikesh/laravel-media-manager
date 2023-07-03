@@ -4,8 +4,8 @@
     type="{{$type ?? 'file'}}"
     class="form-control @error($name) is-invalid @enderror {{$class ?? ''}}"
     name="{{$name}}"
-    multiple="{{$multiple ?? false}}"
-    required="{{$required ?? false}}"
+    {{isset($multiple) && $multiple ? 'multiple' :''}}
+    {{isset($required) && $required ? 'required' :''}}
     autofocus
 >
 @error($name)

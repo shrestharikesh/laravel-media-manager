@@ -1,6 +1,6 @@
 <?php
 
-namespace Shrestharikesh\MediaManager;
+namespace Shrestharikesh\LaravelMediaManager;
 
 use Illuminate\Database\Eloquent\Model;
 

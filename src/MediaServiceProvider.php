@@ -1,6 +1,6 @@
 <?php
 
-namespace Shrestharikesh\MediaManager;
+namespace Shrestharikesh\LaravelMediaManager;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
@@ -20,9 +20,9 @@ class MediaServiceProvider extends ServiceProvider
 
     protected function registerResources(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'media-manager');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'laravel-media-manager');
         $this->publishes([
-            __DIR__ . '/../Resources/views' => resource_path('views/vendor/media-manager'),
-        ], 'media-manager-views');
+            __DIR__ . '/../Resources/views' => resource_path('views/vendor/laravel-media-manager'),
+        ], 'laravel-media-manager-views');
     }
 }

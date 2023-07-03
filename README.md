@@ -18,11 +18,11 @@ Run the migration
 Use the trait given by the package into any model:
 
 ```php
-use Shrestharikesh\MediaManager\InteractsWithMedia;
+use Shrestharikesh\LaravelMediaManager\HasMedia;
 
 class Post extends Model
 {
-    use InteractsWithMedia;
+    use HasMedia;
     // Rest of your code
 }
 ```
@@ -32,21 +32,21 @@ Associate as many media as you want to the model:
 $post = Post::create($data);
 $post->addMedia($request->image);
 ```
-Or just one to each record:
+Or just one to each tag of the model:
 ```php
-$post->addMedia($request->image, 'default', false);
+$post->addMedia($request->image)->deletePrevious();
 ```
-Easily upload media to different topics:
+Easily upload media to different tags:
 ```php
-$post->addMedia($request->featured_image, 'featured');
-$post->addMedia($request->thumbnail_image, 'thumbnail');
+$post->addMedia($request->featured_image)->withTag('featured');
+$post->addMedia($request->thumbnail_image)->withTag('thumbnail');
 ```
 Get all the associated media easily:
 ```php
 $post = Post::find(1);
 $post->getMedia($request->featured_image); // Returns medias from all topics
-$post->getMedia($request->featured_image, 'default'); // Medias uploaded without any topic
-$post->getMedia($request->featured_image, 'featured');
+$post->getMedia($request->featured_image, 'default'); // Medias uploaded without any tag
+$post->getMedia($request->featured_image, 'featured')->withAltText('Featured Image');
 ```
 Or just the one:
 ```php
