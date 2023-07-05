@@ -39,14 +39,14 @@ $post->addMedia($request->image)->deletePrevious();
 Easily upload media to different tags:
 ```php
 $post->addMedia($request->featured_image)->withTag('featured');
-$post->addMedia($request->thumbnail_image)->withTag('thumbnail');
+$post->addMedia($request->thumbnail_image)->withTag('thumbnail')->withAltText('Featured Image');
 ```
 Get all the associated media easily:
 ```php
 $post = Post::find(1);
 $post->getMedia($request->featured_image); // Returns medias from all topics
 $post->getMedia($request->featured_image, 'default'); // Medias uploaded without any tag
-$post->getMedia($request->featured_image, 'featured')->withAltText('Featured Image');
+$post->getMedia($request->featured_image, 'featured');
 ```
 Or just the one:
 ```php
@@ -63,7 +63,7 @@ Show the media easily to your blade files:
 You are about to remove your model and want to remove all associated medias? 
 ```php
 $post = Post::find(1);
-$post->deleteMedia($request->featured_image);
+$post->deleteMedia();
 $post->delete();
 ```
 Or just delete medias from specific topic:
